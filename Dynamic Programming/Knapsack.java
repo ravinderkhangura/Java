@@ -16,7 +16,7 @@ public class Knapsack
 			if (i==0 || w==0)
 				rv[i][w] = 0;
 			else if (wt[i-1] <= w)
-				rv[i][w] = Math.max(val[i-1] + rv[i-1][w-wt[i-1]], rv[i-1][w]);
+				rv[i][w] = Math.max(val[i-1] + rv[i-1][w-wt[i-1]], rv[i-1][w]);// traversing loop
 			else
 				rv[i][w] = rv[i-1][w];
 		}
